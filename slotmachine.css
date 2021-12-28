@@ -1,0 +1,90 @@
+:root{
+    --speed:5;
+}
+
+.machine{
+    background-color: peru;
+    border: dashed brown 3px;
+    height: 300px;
+    width: 900px;
+    margin: 50px;
+
+    z-index: 5;
+    display: flex;
+}
+
+#inpSpeed{
+    font-size: 30pt;
+    margin-left: 30px;
+    width: 50px;
+
+}
+.slot{
+    height: 250px;
+    width: 250px;
+    margin: 20pt;
+    overflow: hidden;
+    z-index: 1;
+    background-color: beige;
+    border: solid darkblue 2px;
+    font-size: 100pt;
+    text-align: center;
+    line-height: 250pt;
+
+}
+
+
+
+.slot>.value{
+   
+    z-index: 3;
+    animation-name: slotspin;
+    animation-iteration-count: infinite;
+    animation-duration: calc(1s/var(--speed));
+}
+
+@keyframes slotspin{
+    0%{
+        transform: translateY(-250px);
+
+    }
+    100%{
+        transform: translateY(250px);
+    }
+}
+
+.controllers{
+    background-color: lightblue;
+    border: solid darkblue 8px;
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+    justify-content: center;
+    width: 900px;
+    margin: 30px;
+}
+
+#btnstop{
+    font-size: 30pt;
+    margin: 50px;
+    color: rgb(223, 7,7);
+}
+
+#btnstart{
+    font-size: 30pt;
+    margin: 50px;
+    color: green;
+}
+
+.output{
+    background-color: lightpink;
+    border: solid purple 8px;
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+    justify-content: center;
+    width: 900px;
+    margin-top: 30px;
+    margin-left: 30px;
+    color: rgb(87, 20, 20);
+}
